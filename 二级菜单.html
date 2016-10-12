@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>二级菜单</title>
+
+    <style>
+      a{
+        color:white;
+        font-family:sans-serif;
+        text-decoration: none;
+      }
+
+
+
+      #primary1{
+        color:white;
+        text-align: center;
+        position: absolute;;
+        width:20%;
+        height: 50px;
+        top:200px;
+        left:30%;
+        background: #CC3300;
+      }
+      #primary2{
+        color:white;
+        text-align: center;
+        background: #003399;
+        position: absolute;;
+        width:20%;
+        height:50px;
+        top:200px;
+        right:30%;
+      }
+
+      #secondary1{
+        display: none;
+        position: absolute;
+        left:30%;
+        top:245px;
+        width: 20%;
+        background: black;
+      }
+
+      #secondary2{
+        display: none;
+        position: absolute;
+        left: 50%;
+        top:245px;
+        width: 20%;
+        background: grey;
+      }
+
+      .blocks{
+        background: #666666;
+        text-align: center;
+        padding: 5px;
+      }
+
+    </style>
+
+    <script language="javascript" type="text/javascript">
+
+      var lightBlue = '#0066ff';
+      var dimBlue = '#003399';
+      var brilliantRed = 'ff3333';
+      var scarlet = '#CC3300';
+      var light = '#999999';
+      var dim = '#666666';
+
+      function show(name){
+        document.getElementById(name).style.display = 'block';
+      }
+      function hide(name){
+        document.getElementById(name).style.display = 'none';
+      }
+      function lit(id,color = light){
+        document.getElementById(id).style.background = color;
+      }
+      function dims(id , color = dim){
+        document.getElementById(id).style.background = color;
+      }
+
+
+
+
+
+
+
+
+    </script>
+  </head>
+
+
+
+
+  <body>
+    <div id="secondary1" onmouseover = "show('secondary1')" onmouseout = "hide('secondary1')">
+      <div id="b1" class = "blocks" onmouseover="lit('b1')" onmouseout="dims('b1')">
+        <p>
+          <a href="#">ABBR</a>
+        </p>
+      </div>
+      <div id="b2" class = "blocks" onmouseover="lit('b2')" onmouseout="dims('b2')">
+        <p>
+          <a href="#">Mac</a>
+        </p>
+      </div>
+    </div>
+
+    <body>
+      <div id="secondary2" onmouseover = "show('secondary2')" onmouseout = "hide('secondary2')">
+        <div id="b3" class = "blocks" onmouseover="lit('b3')" onmouseout="dims('b3')">
+          <p>
+            <a href="#">CDDR</a>
+          </p>
+        </div>
+        <div id="b4" class = "blocks" onmouseover="lit('b4')" onmouseout="dims('b4')">
+          <p>
+            <a href="#">Windows</a>
+          </p>
+        </div>
+        <div id="b5" class = "blocks" onmouseover="lit('b5')" onmouseout="dims('b5')">
+          <p>
+            <a href="#">我也不知道写啥</a>
+          </p>
+        </div>
+      </div>
+
+
+
+    <div id="primary1" onmouseover = "show('secondary1');lit('primary1','#ff3333')" onmouseout = "hide('secondary1');dims('primary1','#CC3300')">
+      <p>
+        这是一级第一个
+      </p>
+    </div>
+    <div id="primary2" onmouseover = "show('secondary2');lit('primary2','#0066ff')" onmouseout = "hide('secondary2');dims('primary2','#003399')">
+      <p>
+        另一个第一级
+      </p>
+    </div>
+
+
+  </body>
+</html>
